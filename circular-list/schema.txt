@@ -1,0 +1,21 @@
+This is an implementation of the circularly-linked list in which elements
+are inserted/deleted after a moveable cursor node. As the name implies, there 
+is a continuous connection among nodes in a non-empty list which means only the 
+cursor node can be NULL. Here is a visualization of the add/remove member functions:
+
+# add 
+nodes l1, l2, l3 are added in respective order to an empty list,
+[] denotes the cursor node, -> represents a link between two nodes
+
+[l1] -> [l1] // self referencing
+[l1] -> l2 -> [l1]
+[l1] -> l3 -> l2 -> [l1]
+
+# remove
+Assume the following list structure:
+[l1] -> l4 -> l3 -> l2 -> [l1]
+
+two subsequent calls to remove will result in the following
+changes to this list structure:
+[l1] -> l3 -> l2 -> [l1]
+[l1] -> l2 -> [l1]

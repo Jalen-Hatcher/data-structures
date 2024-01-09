@@ -1,0 +1,19 @@
+A queue implementation using a circularly-linked list, in which the cursor
+is advanced with each call to enqueue(). As in the Clist, [] denotes the 
+cursor node and -> a link between nodes.
+
+#enqueue
+elements 1,2,3,4 are enqueued to an empty queue in respective order where
+ln denotes the nth element/node. The following reflect each successive change
+to the queue:
+[l1] -> [l1]
+l1 -> [l2] -> l1 
+l1 -> l2 -> [l3] -> l1
+l1 -> l2 -> l3 -> [l4] -> l1
+
+#dequeue
+assume the resulting queue structure from the enqueue demonstaration. The following
+reflects each successive change to the queue after 3 calls to dequeue():
+[l4] -> l2 -> l3 -> [l4]
+[l4] -> l3 -> [l4]
+[l4] -> [l4]

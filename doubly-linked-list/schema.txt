@@ -1,0 +1,5 @@
+This is an implemntation of a doubly-linked-list wherein nodes contain both
+forward and backward links. Insertion/removal can take place at the the back or 
+front of the list. As a solution to dealing with edge cases, sentinel or dummy nodes 
+are introduced, which mark the limits of a list. No insertion/removal can take place 
+at or beyond these sentinel nodes. 
